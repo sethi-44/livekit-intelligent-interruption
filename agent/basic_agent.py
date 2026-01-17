@@ -1,6 +1,7 @@
 from enum import Enum
 import re
-
+from dotenv import load_dotenv
+load_dotenv()
 from livekit.agents import (
     Agent,
     AgentSession,
