@@ -20,10 +20,10 @@ from agent.interrupt_config import IGNORE_WORDS, INTERRUPT_WORDS
 # ============================================================
 # Simple finite state machine to track what the agent is doing
 class FSMState(str, Enum):
-    SILENT = "SILENT"                 # Agent is not speaking
-    SPEAKING = "SPEAKING"             # Agent is currently talking
+    SILENT = "SILENT"                 
+    SPEAKING = "SPEAKING"             
     POTENTIAL_INTERRUPT = "POTENTIAL_INTERRUPT"
-    # VAD detected user speech while agent was speaking
+    
 
 @function_tool
 async def lookup_weather(context: RunContext, location: str):
@@ -85,7 +85,7 @@ async def entrypoint(ctx: JobContext):
         stt=deepgram.STT(model="nova-3"),
         llm=openai.LLM(model="gpt-4o-mini"),
         tts=elevenlabs.TTS(),
-        allow_interruptions=False,  # required for this assignment
+        allow_interruptions=False,  
     )
 
     fsm_state: FSMState = FSMState.SILENT
