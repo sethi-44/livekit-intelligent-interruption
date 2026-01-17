@@ -1,0 +1,8 @@
+livekit-agents
+livekit
+livekit-plugins-deepgram
+livekit-plugins-openai
+livekit-plugins-silero
+livekit-plugins-elevenlabs
+pytest>=9.0.0
+anyio>=4.0.0
