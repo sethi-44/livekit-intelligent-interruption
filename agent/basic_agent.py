@@ -12,7 +12,7 @@ from livekit.agents import (
 )
 from livekit.plugins import deepgram, openai, silero, elevenlabs
 
-from .interrupt_config import IGNORE_WORDS, INTERRUPT_WORDS
+from agent.interrupt_config import IGNORE_WORDS, INTERRUPT_WORDS
 
 
 # ============================================================
